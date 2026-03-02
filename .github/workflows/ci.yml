@@ -52,7 +52,9 @@ jobs:
           pip install pytest pytest-cov
 
       - name: Exécuter les tests
-        run: pytest tests/ -v --cov=app
+        run: |
+            export PYTHONPATH=$PYTHONPATH:.
+            pytest tests/ -v --cov=app
 
 
   build:
