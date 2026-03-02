@@ -33,7 +33,7 @@ jobs:
 
 
   test:
-    name: Job 2 - Tests unitaires
+    name: Job 2 - Exécution des Tests 
     runs-on: ubuntu-latest
     needs: lint   
     steps:
@@ -58,7 +58,7 @@ jobs:
 
 
   build:
-    name: Job 3 - Build final
+    name: Job 3 - Build du package
     runs-on: ubuntu-latest  
     needs: test
 
