@@ -7,7 +7,6 @@ class UserManager:
         if username in self.users:
             raise ValueError("Utilisateur déja existant")
         self.users.append(username)
-
     def remove_user(self, username):
         if username not in self.users:
             raise ValueError("Utilisateur introuvable")

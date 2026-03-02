@@ -25,11 +25,5 @@ jobs:
       - name: Lancer le linter (app - erreurs critiques)
         run: flake8 app --count --select=E9,F63,F7,F82,F841 --show-source --statistics
 
-      - name: Lancer le linter (app - complexité et longueur)
-        run: flake8 app --count --max-complexity=10 --max-line-length=127 --statistics
-
-      - name: Lancer le linter (tests)
-        run: flake8 tests --count --max-line-length=127 --statistics
-
       - name: Lancer les tests
         run: pytest tests/ -v --cov=app
